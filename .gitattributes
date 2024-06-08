@@ -1,0 +1,3 @@
+models/Xception.h5 filter=lfs diff=lfs merge=lfs -text
+models/efficientNet.h5 filter=lfs diff=lfs merge=lfs -text
+archive.zip filter=lfs diff=lfs merge=lfs -text

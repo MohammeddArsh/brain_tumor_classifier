@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="container">
+        <h1>Brain Tumor Classifier</h1>
+        <!-- <button id="info" type="submit">Model info</button> -->
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="file-input" class="file-label">Select a brain MRI scan image:</label>
+            <input type="file" id="file-input" accept="image/*" required>
+            <button type="submit">Predict</button>
+            <progress id="progress-bar" value="0" max="100" style="display: none;"></progress>
+        </form>
+        <button id="info" >Model info</button>
+        <div id="popupModal" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <h1>Models Trained</h1>
+                <table border="1"> <!-- Adding a border for visibility -->
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Model</th>
+                        <th>Accuracy</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>EfficientNet</td>
+                        <td>99.39%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Xception</td>
+                        <td>99.24%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>DenseNet</td>
+                        <td>97.87%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="image-container" class="image-container"></div>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
